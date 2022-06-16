@@ -1,0 +1,59 @@
+.mastercraft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid red;
+    margin-bottom: 1.5rem;
+}
+
+.mastercraft__logo {
+    position: absolute;
+    top: -1.5rem;
+}
+
+.mastercraft__title {
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.mastercraft__text {
+    text-align: center;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.mastercraft__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mastercraft__call-to-action {
+    border-radius: 2em;
+    padding: 1.3em 2.8em;
+    color: #FFF;
+    background-color: var(--moderate-cyan);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mastercraft__bookmark {
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 333px) {
+    .mastercraft__buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mastercraft__bookmark {
+        margin-top: 0.5rem;
+    }
+}

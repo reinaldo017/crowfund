@@ -1,0 +1,17 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid green;
+}
+
+.stats__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats hr {
+    color: var(--dark-gray);
+}

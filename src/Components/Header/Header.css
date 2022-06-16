@@ -1,0 +1,21 @@
+.header {
+    background-image: url('./image-hero-mobile.jpg');
+    background-size: cover;
+    height: 18.75rem;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.25rem 1.5rem;
+}
+
+.hamburger-logo {
+    cursor: pointer
+}
+
+@media screen and (min-width: 800px) {
+    .hamburger-logo {
+        display: none;
+    }
+}

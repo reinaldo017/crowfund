@@ -1,0 +1,45 @@
+:root {
+  /*Colors*/
+  --moderate-cyan: hsl(176, 50%, 47%);
+  --dark-cyan: hsl(176, 72%, 28%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 48%);
+
+  /* Font */
+  --font: 'Commissioner', sans-serif;
+  --font-size-sm: clamp(0.8rem, 0.13vw + 0.77rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.27vw + 0.95rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.48vw + 1.15rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 0.78vw + 1.41rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.23vw + 1.71rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 1.87vw + 2.07rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 2.78vw + 2.5rem, 5rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--dark-gray);
+}
+ 
+button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
