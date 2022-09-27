@@ -1,0 +1,72 @@
+@use '../../sass/base/reset';
+@use '../../sass/base';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-family: base.$font-1;
+    font-size: 100%;
+    font-weight: 400;
+  }
+
+  body {
+    background-color: base.$light-gray;
+  }
+
+  h2 {
+    font-size: base.$font-size-base;
+
+    @media screen and (min-width: base.$s) {
+      font-size: base.$font-size-md;
+    }
+  }
+
+  h3 {
+    font-size: base.$font-size-sm;
+
+    @media screen and (min-width: base.$s) {
+      font-size: base.$font-size-base;
+    }
+  }
+  
+  p {
+    line-height: 1.5;
+    color: base.$dark-gray;
+    font-size: base.$font-size-sm;
+
+    @media screen and (min-width: base.$s) {
+      font-size: base.$font-size-base;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+   
+  button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -6rem;
+    margin: 0 1.5rem;
+    max-width: 45.5rem;
+
+    @media screen and (min-width: base.$m) {
+      margin: 0 auto;
+    }
+  }

@@ -1,0 +1,21 @@
+@use '../../sass/base';
+
+.cta {
+    grid-area: button;
+    padding: 1em 2em;
+    border-radius: 2em;
+    color: #FFF;
+    background-color: base.$moderate-cyan;
+    font-size: base.$font-size-sm;
+    font-weight: bold;
+    cursor: pointer;
+    
+    @media screen and (min-width: base.$s) {
+      font-size: base.$font-size-base;
+    }
+}
+
+.disabled {
+    background-color: base.$dark-gray;
+    cursor:default;
+}

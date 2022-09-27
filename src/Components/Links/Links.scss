@@ -1,0 +1,43 @@
+@use '../../sass/base';
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: 5.75rem;
+    width: calc(100% - 1.5rem * 2);
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.mobile-links__li {
+    padding: 1.5em;
+}
+
+.mobile-links__a {
+    font-family: base.$font-1;
+    font-size: base.$font-size-base;
+    font-weight: 500;
+    color: base.$black;
+}
+
+.desktop-links {
+    display: none;
+    
+    &__a {
+        color: base.$white;
+    }
+}
+
+@media screen and (min-width: base.$m) {
+    .mobile-links {
+        display: none;
+    }
+    .desktop-links {
+        display: flex;
+        column-gap: 2rem;
+    }
+}

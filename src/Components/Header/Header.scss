@@ -1,0 +1,13 @@
+@use '../../sass/base';
+
+.header {
+    background-image: linear-gradient(0deg,  transparent 70%, rgba(0, 0, 0, 0.5)), url('./image-hero-mobile.jpg');
+    background-size: cover;
+    min-height: 18.75rem;
+
+
+    @media screen and (min-width: base.$m) {
+        background-image: linear-gradient(0deg,  transparent 60%, rgba(0, 0, 0, 0.5)), url('./image-hero-desktop.jpg');
+        min-height: 25rem;
+    }
+}

@@ -1,0 +1,71 @@
+@use '../../sass/base';
+
+.card {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-areas:
+        'title'
+        'pledge'
+        '.'
+        'description'
+        '.'
+        'left'
+        '.'
+        'button';
+    justify-items: start;
+    align-items: center;
+    min-height: 23rem;
+    padding: min(10%,1.5rem);
+    border: 3px solid base.$light-gray;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+
+    @media screen and (min-width: base.$m) {
+        grid-template-areas:
+            'title . pledge'
+            'description description description'
+            'left . button';
+        align-items: center;
+    }
+
+    &--disabled {
+        opacity: 0.4;
+    }
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__pledge {
+        grid-area: pledge;
+        font-weight: 500;
+        color: base.$moderate-cyan;
+    }
+
+    &__description {
+        grid-area: description;
+    }
+
+    &__number {
+        font-size: base.$font-size-lg;
+
+        @media screen and (min-width: base.$s) {
+            font-size: base.$font-size-xl;
+        }
+    }
+
+    &__left {
+        grid-area: left;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 0.5rem;
+            font-size: base.$font-size-sm;
+        }
+    }
+
+    &__button {
+        grid-area: button;
+    }
+}

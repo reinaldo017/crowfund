@@ -1,0 +1,20 @@
+@use '../../sass/base';
+
+.completed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem 2.5rem;
+    text-align: center;
+
+    @media screen and (min-width: base.$m) {
+        padding: 3rem;
+    }
+
+    &__paragraph {
+        // font-size: base.$font-size-base;
+        line-height: 1.5;
+    }
+}

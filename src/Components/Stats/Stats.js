@@ -1,31 +1,34 @@
+import './Stats.scss'
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Stats.css'
+import ProgressBar from '../ProgressBar/ProgressBar'
 
 const Stats = ({ backed, backers, daysLeft }) => {
   const formatter = new Intl.NumberFormat('en-US')
+  const formatedBacked = formatter.format(backed)
+  const formatedBackers = formatter.format(backers)
+
+  const percentage = (backed / 100000) * 100
+
   return (
     <article className='stats'>
+      <div className='stats__container'>
         <section className='stats__section'>
-          <h2>${formatter.format(backed)}</h2>
+          <h2 className='stats__number'>${formatedBacked}</h2>
           <p>of $100,000 backed</p>
-          <hr/>
         </section>
+          <hr/>
         <section className='stats__section'>
-          <h2>{formatter.format(backers)}</h2>
+          <h2 className='stats__number'>{formatedBackers}</h2>
           <p>total backers</p>
-          <hr/>
         </section>
+          <hr/>
         <section className='stats__section'>
-          <h2>{daysLeft}</h2>
+          <h2 className='stats__number'>{daysLeft}</h2>
           <p>days left</p>
-          <hr/>
         </section>
-        <section className='stats__section'>
-          <div className='stats__progress-bar'>
-              <div className='stats__progress-bar-fill'></div>
-          </div>
-        </section>
+      </div>
+      <ProgressBar percentage={percentage}/>
     </article>
   )
 }

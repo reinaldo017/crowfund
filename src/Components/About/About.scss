@@ -1,0 +1,12 @@
+@use '../../sass/base';
+
+.about {
+    padding: min(10%, 3em);
+    border-radius: 10px;
+    margin: 1.5rem auto;
+    background-color: base.$white;
+
+    &__paragraph {
+        margin: 2rem auto;
+    }
+}

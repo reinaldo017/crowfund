@@ -1,0 +1,32 @@
+@use '../../sass/base';
+
+.back {
+    padding: min(10%, 3em);
+
+    @media screen and (min-width: base.$m) {
+        padding: 3rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title
+
+    &__close-icon {
+        cursor: pointer;
+    }
+
+    &__paragraph {
+        margin: 1.75rem auto;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
